@@ -6,9 +6,10 @@ int main() {
 	for(k = 1;k <= n;k++) {
 		t = i + j;
 		printf("%d,",t);
-		if(t == 0) {
+		if(t == 0 && n >= 2) {
 			t = 1;
 			printf("%d,",t);
+			k++;
 		}
 		i = j;
 		j = t;
