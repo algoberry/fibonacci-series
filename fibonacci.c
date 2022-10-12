@@ -1,18 +1,21 @@
 #include <stdio.h>
 int main() {
-	int i=0,j=0,t=0,k,n;
+	int i=0,j=0,k,c,n;
 	printf("Enter the number of terms: ");
 	scanf("%d",&n);
-	for(k = 1;k <= n;k++) {
-		t = i + j;
-		printf("%d,",t);
-		if(t == 0 && n >= 2) {
-			t = 1;
-			printf("%d,",t);
-			k++;
+	for(c = 1;c <= n;c++) {
+		k = i+j;
+		printf("%d ",k);
+		if(j == 0) {
+			if(n > 1) {
+				k = 1;
+				printf("%d ",k);
+				c++;
+			}
 		}
 		i = j;
-		j = t;
+		j = k;
 	}
+	printf("\n");
 	return 0;
 }
